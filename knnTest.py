@@ -17,7 +17,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-@app.route("/",methods=['POST'])
+@app.route("/")
 def hello_world():
     # data = request.get_json()
     # input_strings = data['input_strings']
@@ -26,7 +26,7 @@ def hello_world():
     result = your_ml_function()
     
     print(result)
-    return "<p>Hello, World!</p>"
+    return result[0]
 
 
 # @app.route('/predict', methods=['POST'])
